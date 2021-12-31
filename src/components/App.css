@@ -1,0 +1,53 @@
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+#mainContent {
+  top: 0;
+  margin: auto;
+  width: 95%;
+  padding: 10px;
+}
+
+.navLink:hover{
+  background-color: #e0e0e0;
+}
+
+.navbar .dropdown-menu {
+  background-color: white;
+}
+
+.nav-link.active {
+  background-color: #e0e0e0;
+}
+
+.dropdown .btn-primary{
+  background-color: unset;
+  border-color: unset;
+  border:unset 
+}
+
+
+.dropdown .btn-primary, .dropdown .btn-primary:hover, .dropdown .btn-primary:focus, .dropdown .btn-primary:visited{
+  background-color: unset;
+  border-color: unset;
+  border:unset 
+}
+
+.profileInformation{
+  border-style: solid;
+  border-width: thin;
+  border-color: #FFFFFF;
+}
+
+.dropdown-toggle::after {
+  color: black;
+  background-color: unset;
+  border-color: unset;
+  border:unset 
+}
+
+.profile .card {
+  border:none;
+}
