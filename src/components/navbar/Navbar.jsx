@@ -6,41 +6,41 @@ const Navbar = ({ headshot }) => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <button type="button" className="btn btn-light navbar-brand">
             <div className="logo">
             <FontAwesomeIcon icon={faNotesMedical} size="lg"/>
             <h3> eMedRecords</h3>
             </div>
-          </a>
+          </button>
           <div
             className="collapse navbar-collapse"
             id="navbarRightAlignExample"
           >
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
               <li className="nav-item lead">
-                <a className="nav-link navLink" href="#">
+                <button className="btn btn-light nav-link navLink">
                   Chart
-                </a>
+                </button>
               </li>
               <li className="nav-item">
-                <a className="nav-link navLink lead" href="#">
+                <button className="btn btn-light nav-link navLink">
                   Encounter
-                </a>
+                </button>
               </li>
               <li className="nav-item">
-                <a className="nav-link navLink lead" href="#">
+                <button className="btn btn-light nav-link navLink">
                   In Basket
-                </a>
+                </button>
               </li>
               <li className="nav-item">
-                <a className="nav-link navLink lead" href="#">
+                <button className="btn btn-light nav-link navLink" >
                   Schedule
-                </a>
+                </button>
               </li>
               <li className="nav-item">
-                <a className="nav-link navLink lead active" href="#">
+                <button className="btn nav-link navLink active">
                   Medflows
-                </a>
+                </button>
               </li>
               <li className="nav-item">
                 <Dropdown className="avatar">

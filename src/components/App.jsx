@@ -35,7 +35,7 @@ const App = () => {
     <div className="App">
       <div className="container">
         <Navbar {...userInfo} />
-        <div className={"row mt-1 d-md-flex shadow p-3 mb-5 rounded bg-light py-0 px-2"}>
+        <div className={"row mt-1 d-md-flex shadow mb-2 rounded bg-light py-0"}>
           <div className="col-md-8">
           <Profile {...userInfo} insuranceInfo={insuranceInfo}/>
           </div>
