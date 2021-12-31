@@ -10,8 +10,28 @@
   padding: 10px;
 }
 
-.navLink:hover{
-  background-color: #e0e0e0;
+
+.navLink{
+  position: relative;
+}
+
+.navLink::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1d9fa3;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navLink:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 }
 
 .navbar .dropdown-menu {
@@ -19,13 +39,21 @@
 }
 
 .nav-link.active {
-  background-color: #e0e0e0;
+  background-color: #86dde0;
 }
 
 .dropdown .btn-primary{
   background-color: unset;
   border-color: unset;
   border:unset 
+}
+
+.infoSection {
+  border-width: 1px;
+  border-style: solid;
+  padding: 0px;
+  border-radius: 8px;
+  border-color: #1d9fa3;
 }
 
 
@@ -42,7 +70,7 @@
 }
 
 .dropdown-toggle::after {
-  color: black;
+  color: #1d9fa3;
   background-color: unset;
   border-color: unset;
   border:unset 
@@ -51,3 +79,19 @@
 .profile .card {
   border:none;
 }
+
+.logo {
+  font-weight: 500;
+  font: sans-serif;
+  color: #1d9fa3;
+  display: -webkit-box;
+}
+
+.logo h3{
+  margin-left: 5px;
+}
+
+.data {
+  font-weight: 600;
+}
+
