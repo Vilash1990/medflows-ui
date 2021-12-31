@@ -1,0 +1,21 @@
+
+.nav-link {
+    border-radius: 0px !important;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column
+}
+
+.nav-link small {
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.nav-link .fa {
+    transition: all 1s;
+}
+
+.nav-link:hover .fa {
+    transform: rotate(360deg)
+}

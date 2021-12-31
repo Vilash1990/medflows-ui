@@ -6,7 +6,7 @@
 #mainContent {
   top: 0;
   margin: auto;
-  width: 95%;
+  width: 100%;
   padding: 10px;
 }
 
@@ -38,7 +38,7 @@
   background-color: white;
 }
 
-.nav-link.active {
+.navLink.active {
   background-color: #86dde0;
 }
 
@@ -47,15 +47,6 @@
   border-color: unset;
   border:unset 
 }
-
-.infoSection {
-  border-width: 1px;
-  border-style: solid;
-  padding: 0px;
-  border-radius: 8px;
-  border-color: #1d9fa3;
-}
-
 
 .dropdown .btn-primary, .dropdown .btn-primary:hover, .dropdown .btn-primary:focus, .dropdown .btn-primary:visited{
   background-color: unset;
@@ -93,5 +84,11 @@
 
 .data {
   font-weight: 600;
+}
+
+ .infoSection:hover {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #1d9fa3;
 }
 

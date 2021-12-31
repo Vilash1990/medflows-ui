@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNotesMedical } from "@fortawesome/free-solid-svg-icons";
 const Navbar = ({ headshot }) => {
   return (
-    <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <button type="button" className="btn btn-light navbar-brand">
@@ -64,7 +63,6 @@ const Navbar = ({ headshot }) => {
           </div>
         </div>
       </nav>
-    </div>
   );
 };
 
