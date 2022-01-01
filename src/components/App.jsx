@@ -1,8 +1,8 @@
-import "./App.css";
+import "../styles/App.scss";
 import Profile from "./Profile";
-import Insurance from "./Insurance";
 import { useState, useEffect } from "react";
 import MedflowNavbar from "./navbar/MedflowNavbar";
+import MedflowTabs from "./navbar/MeflowTabs";
 const App = () => {
   const [userInfo, setUserInfo] = useState();
   const [insuranceInfo, setInsuranceInfo] = useState();
@@ -13,7 +13,8 @@ const App = () => {
       dateOfBirth: "08/07/1983",
       physician: "Dr.Kevin Castor",
       gender: "Female",
-      headshot: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(31).webp"
+      headshot: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(31).webp",
+      cellPhone: "309-309-3094"
     };
     const mockInsuranceInfo = {
       providerName: "Cigna PPO",
@@ -34,13 +35,11 @@ const App = () => {
             "d-md-flex shadow-sm rounded bg-light py-0 mx-0 mt-1 infoSection"
           }
         >
-          <div className="col-md-8">
-            <Profile {...userInfo} insuranceInfo={insuranceInfo} />
-          </div>
-          <div className="col-md-4">
-            <Insurance {...insuranceInfo} />
+          <div className="col-md-12">
+            <Profile userInfo={userInfo} insuranceInfo={insuranceInfo} />
           </div>
         </div>
+        <MedflowTabs />
       </div>
     </div>
   );
