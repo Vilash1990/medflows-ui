@@ -13,7 +13,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { usePatientInfo } from "../context/UserContext";
-import Medflows from "./Medflows";
 
 const MedflowNavbar = () => {
   const patientInfo = usePatientInfo();

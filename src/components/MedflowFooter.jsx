@@ -1,4 +1,4 @@
-import { Container, Navbar, NavbarBrand } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 const MedflowFooter = () => {
