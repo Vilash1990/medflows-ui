@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React ,{ useState } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +15,7 @@ const Profile = ({ userInfo, insuranceInfo }) => {
   };
 
   return (
-    <Container className="profile py-0">
+    <Container className="profile py-2">
       <Row
         className={getDisplayStateName()}
         id="userInfoPanelHeader"
@@ -23,19 +23,19 @@ const Profile = ({ userInfo, insuranceInfo }) => {
         tabIndex="0"
         onClick={() => toggleState()}
       >
-        <Col md={4}>
-          <h6>Patient Name:</h6><span className="data">{userInfo.name}</span>
+        <Col xs={12} lg={4}>
+          <strong>Patient Name:</strong><span className="data">{userInfo.name}</span>
         </Col>
-        <Col md={2}>
-          Age :<span className="data">{userInfo.age}</span>
+        <Col xs={12} lg={2}>
+        <strong>Age :</strong><span className="data">{userInfo.age}</span>
         </Col>
-        <Col md={2}>
-          DOB :<span className="data">{userInfo.dateOfBirth}</span>
+        <Col xs={12} lg={2}>
+        <strong>DOB :</strong><span className="data">{userInfo.dateOfBirth}</span>
         </Col>
-        <Col md={3}>
-          Insurance :<span className="data">{insuranceInfo.providerName}</span>
+        <Col xs={12} lg={3}>
+        <strong>Insurance :</strong><span className="data">{insuranceInfo.providerName}</span>
         </Col>
-        <Col md={1}>
+        <Col xs={12} lg={1}>
           {expandState ? (
             <FontAwesomeIcon icon={faChevronUp} className="chevronIcon" id="chevron" />
           ) : (
@@ -45,22 +45,21 @@ const Profile = ({ userInfo, insuranceInfo }) => {
       </Row>
       {expandState && (
         <Row>
-          <Col md={3}>
+          <Col xs={12} lg={4}>
             <div className="card bg-light my-1 borderRight">
-              <div className="card-body text-sm-left text-lg-center">
+              <div className="card-body text-sm-left text-lg-left">
                 <img
                   src={userInfo.headshot}
                   className="rounded-circle mb-1"
-                  height={"75"}
+                  height={"100"}
                   alt=""
                 />
-                <h5 className="card-title data">{userInfo.name}</h5>
               </div>
             </div>
           </Col>
-          <Col md={2}>
+          <Col xs={12} lg={4}>
             <div className="card bg-light borderRight">
-              <div className="card-body text-lg-left">
+              <div className="card-body text-lg-left px-0">
                 <Row>
                   <Col>
                     <p>
@@ -77,8 +76,8 @@ const Profile = ({ userInfo, insuranceInfo }) => {
               </div>
             </div>
           </Col>
-          <Col md={7}>
-            <div className="">
+          <Col xs={12} lg={4}>
+            <div >
               <Insurance {...insuranceInfo} />
             </div>
           </Col>

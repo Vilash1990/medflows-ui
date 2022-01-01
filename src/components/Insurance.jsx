@@ -1,9 +1,9 @@
 import { Row, Col } from "react-bootstrap";
 const Insurance = ({ ...insuranceInfo }) => {
   return (
-    <div className="container-fluid  justify-content-md-between align-items-center profile">
+    <div className="container-fluiprofile">
       <div className="card bg-light">
-        <div className="card-body text-left">
+        <div className="card-body text-lg-left px-0">
           <Row>
             <Col>
               <p>

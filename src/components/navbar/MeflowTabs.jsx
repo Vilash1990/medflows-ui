@@ -2,18 +2,20 @@ import { useState } from "react";
 import { Tabs, Tab } from "react-bootstrap";
 
 const MedflowTabs = () => {
-  const [key, setKey] = useState("home");
+  const [key, setKey] = useState("progressNotes");
   return (
-    <div className="mt-2">
+    <div className="mt-3">
       <Tabs
         id="controlled-tab-example "
         activeKey={key}
         onSelect={(k) => setKey(k)}
         className="mb-3"
       >
-        <Tab eventKey="home" title="Home"></Tab>
-        <Tab eventKey="profile" title="Profile"></Tab>
-        <Tab eventKey="contact" title="Contact" ></Tab>
+        <Tab eventKey="vitals" title="Vitals"></Tab>
+        <Tab eventKey="allergies" title="Allergies"></Tab>
+        <Tab eventKey="progressNotes" title="Progress Notes"></Tab>
+        <Tab eventKey="differentials" title="Differentials"></Tab>
+        <Tab eventKey="medications" title="Medications" disabled></Tab>
       </Tabs>
     </div>
   );
