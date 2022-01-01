@@ -1,11 +1,11 @@
-const Profile = ({...userInfo}) => {
+const Profile = ({ ...userInfo }) => {
   return (
     <div
-      className="container-fluid d-md-flex justify-content-md-between
-    align-items-center profile"
+      className="container d-md-flex justify-content-md-between
+    align-items-center profile py-0"
     >
       <div className="card bg-light col-md-5 profileInformation">
-        <div className="card-body text-center">
+        <div className="card-body text-sm-left text-lg-center">
           <img
             src={userInfo.headshot}
             className="rounded-circle mb-3"
@@ -15,6 +15,7 @@ const Profile = ({...userInfo}) => {
           <h5 className="card-title mb-3">{userInfo.name}</h5>
         </div>
       </div>
+
       <div className="card bg-light col-md-6">
         <div className="card-body text-left">
           <p className="">

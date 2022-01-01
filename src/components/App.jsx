@@ -2,8 +2,7 @@ import "./App.css";
 import Profile from "./Profile";
 import Insurance from "./Insurance";
 import { useState, useEffect } from "react";
-import Navbar from "./navbar/Navbar";
-import Slidebar from "./navbar/Slidebar";
+import MedflowNavbar from "./navbar/MedflowNavbar";
 const App = () => {
   const [userInfo, setUserInfo] = useState();
   const [insuranceInfo, setInsuranceInfo] = useState();
@@ -34,27 +33,18 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-2">
-            <Slidebar />
+      <div className="container">
+        <MedflowNavbar {...userInfo} />
+        <div
+          className={
+            "d-md-flex shadow-sm rounded bg-light py-0 mx-0 mt-1 infoSection"
+          }
+        >
+          <div className="col-md-8">
+            <Profile {...userInfo} insuranceInfo={insuranceInfo} />
           </div>
-          <div className="col-md-10">
-            <div className="shadow-sm mb-1 rounded navBar">
-              <Navbar {...userInfo} />
-            </div>
-            <div
-              className={
-                "mt-1 d-md-flex shadow mb-2 rounded bg-light py-0 infoSection"
-              }
-            >
-              <div className="col-md-8">
-                <Profile {...userInfo} insuranceInfo={insuranceInfo} />
-              </div>
-              <div className="col-md-4">
-                <Insurance {...insuranceInfo} />
-              </div>
-            </div>
+          <div className="col-md-4">
+            <Insurance {...insuranceInfo} />
           </div>
         </div>
       </div>
