@@ -25,16 +25,16 @@ const MedflowNavbar = ({ headshot }) => {
         <Navbar.Toggle />
 
         <Navbar.Collapse>
-          <Nav className="ms-auto">
-            <Nav.Link href="#chart">
+          <Nav className="ms-auto" >
+            <Nav.Link href="#chart" className="navLink">
               <FontAwesomeIcon icon={faChartBar} className="icon" size="sm" />
               Chart
             </Nav.Link>
-            <Nav.Link href="#features">
+            <Nav.Link href="#features" className="navLink">
               <FontAwesomeIcon icon={faCalculator} className="icon" size="sm" />
               Encounter
             </Nav.Link>
-            <Nav.Link href="#cart">
+            <Nav.Link href="#cart" className="navLink">
               <FontAwesomeIcon
                 icon={faShoppingCart}
                 className="icon"
@@ -42,7 +42,7 @@ const MedflowNavbar = ({ headshot }) => {
               />
               In Basket
             </Nav.Link>
-            <Nav.Link href="#medflows">
+            <Nav.Link href="#medflows" className="navLink activeLink">
               <FontAwesomeIcon
                 icon={faNotesMedical}
                 className="icon"
@@ -50,11 +50,11 @@ const MedflowNavbar = ({ headshot }) => {
               />
               Medflows
             </Nav.Link>
-            <Nav.Link href="#differentials">
+            <Nav.Link href="#differentials" className="navLink">
               <FontAwesomeIcon icon={faMinus} size="sm" className="icon" />
               Differentials
             </Nav.Link>
-            <Nav.Link href="#calculators">
+            <Nav.Link href="#calculators" className="navLink">
               <FontAwesomeIcon icon={faCalculator} size="sm" className="icon" />
               Calculators
             </Nav.Link>

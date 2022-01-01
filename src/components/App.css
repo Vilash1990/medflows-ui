@@ -41,7 +41,7 @@
   background-color: white;
 }
 
-.navLink.activeLink {
+.activeLink {
   background-color: #86dde0;
 }
 
