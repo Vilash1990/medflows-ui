@@ -5,7 +5,7 @@ const Insurance = ({ ...insuranceInfo }) => {
         <div className="card-body text-left">
           <p>
             Insurance:
-            <span className="data">{insuranceInfo.policyNumber}</span>
+            <span className="data">{insuranceInfo.providerName}</span>
           </p>
           <p>
             Policy Number:
