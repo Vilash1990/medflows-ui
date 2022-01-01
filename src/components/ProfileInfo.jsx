@@ -6,7 +6,7 @@ import InsuranceInfo from "./InsuranceInfo";
 import { usePatientInfo } from "../context/UserContext";
 const ProfileInfo = () => {
   const patientInfo = usePatientInfo();
-  const [expandState, setExpandedState] = useState(false);
+  const [expandState, setExpandedState] = useState(true);
 
   const toggleState = () => {
     setExpandedState(!expandState);
@@ -37,7 +37,7 @@ const ProfileInfo = () => {
         <Col xs={12} lg={3}>
         <strong>Insurance :</strong><span className="data">{patientInfo.insuranceInfo.providerName}</span>
         </Col>
-        <Col xs={12} lg={1}>
+        <Col xs={12} lg={1} className="text-end">
           {expandState ? (
             <FontAwesomeIcon icon={faChevronUp} className="chevronIcon" id="chevron" />
           ) : (

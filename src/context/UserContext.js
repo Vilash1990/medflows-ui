@@ -31,6 +31,33 @@ export function UserInfoProvider({ children }) {
     complaints: ["Fatigue", "Weight Gain", "High Cholesterol"],
     pastHealthIssues: ["Headache", "Thorat Pain", "Nasal Congestion"],
     medications: ["Vitamin D", "Medicine A", "Tylenol 50mg"],
+    physicalExams: ["TSH", "D Vitamin", "Viral", "Hemoglobin"],
+    historicalReports: [
+      {
+        component: "HGB",
+        referenceRangeStart: "12.3",
+        referenceRangeEnd: "16.5",
+        actualValue: "14.5",
+      },
+      {
+        component: "WBC",
+        referenceRangeStart: "3.6",
+        referenceRangeEnd: "10.2",
+        actualValue: "7.1",
+      },
+      {
+        component: "MCV",
+        referenceRangeStart: "82",
+        referenceRangeEnd: "99",
+        actualValue: "86",
+      },
+      {
+        component: "TSH",
+        referenceRangeStart: "0.30",
+        referenceRangeEnd: "5.3",
+        actualValue: "0.2",
+      }
+    ],
     assessmentPlan: [],
   });
 
@@ -46,4 +73,3 @@ export function UserInfoProvider({ children }) {
     </UserContext.Provider>
   );
 }
-;

@@ -1,4 +1,4 @@
-$primaryColor: #1d9fa3;
+$primaryColor: #18868a;
 $backgroundColor: #86dde0;
 
 .App {
@@ -78,7 +78,7 @@ div.card.bg-light.col-md-4.borderRight {
 }
 
 .data {
-  font-weight: 400;
+  font-weight: 450;
   margin-left: 5px;
   color: $primaryColor;
 }
@@ -117,3 +117,9 @@ button.nav-link:hover{
   bottom: 0;
   position: absolute;
 }
+
+.strong{
+  color: black;
+  font-weight: 400;
+}
+

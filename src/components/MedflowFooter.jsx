@@ -4,7 +4,7 @@ import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 const MedflowFooter = () => {
   return (
      <div className="fixed-bottom text-center">  
-     <Navbar color="dark" dark>
+     <Navbar color="dark">
          <Container>
              <small className="mx-auto" ><FontAwesomeIcon icon={faCopyright} size="sm" />
           2018-2022 Medflow Solutions Inc., All rights reserved</small>

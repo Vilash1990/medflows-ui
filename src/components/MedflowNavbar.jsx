@@ -13,11 +13,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { usePatientInfo } from "../context/UserContext";
+import Medflows from "./Medflows";
 
 const MedflowNavbar = () => {
   const patientInfo = usePatientInfo();
   return (
-    <Navbar bg="light" variant="light" sticky="top" expand="lg" className="shadow-sm rounded">
+    <Navbar bg="light" variant="light" sticky="top" expand="lg" className="shadow-sm rounded navBar">
       <Container>
         <Navbar.Brand href="#home">
           <div className="logo">
@@ -32,11 +33,11 @@ const MedflowNavbar = () => {
           <Nav className="ms-auto" >
             <Nav.Link href="#chart" className="navLink">
               <FontAwesomeIcon icon={faChartBar} className="icon" size="sm" />
-              Chart
+              <span className="strong">Chart</span>
             </Nav.Link>
             <Nav.Link href="#features" className="navLink">
               <FontAwesomeIcon icon={faCalculator} className="icon" size="sm" />
-              Encounter
+              <span className="strong">Encounter</span>
             </Nav.Link>
             <Nav.Link href="#cart" className="navLink">
               <FontAwesomeIcon
@@ -44,23 +45,23 @@ const MedflowNavbar = () => {
                 className="icon"
                 size="sm"
               />
-              In Basket
+              <span className="strong">In Basket</span>
             </Nav.Link>
-            <Nav.Link href="#medflows" className="navLink activeLink">
+            <Nav.Link href="/Medflows" className="navLink activeLink">
               <FontAwesomeIcon
                 icon={faNotesMedical}
                 className="icon"
                 size="sm"
               />
-              Medflows
+              <span className="strong">Medflows</span>
             </Nav.Link>
             <Nav.Link href="#differentials" className="navLink">
               <FontAwesomeIcon icon={faMinus} size="sm" className="icon" />
-              Differentials
+              <span className="strong">Differentials</span>
             </Nav.Link>
             <Nav.Link href="#calculators" className="navLink">
               <FontAwesomeIcon icon={faCalculator} size="sm" className="icon" />
-              Calculators
+              <span className="strong">Calculators</span>
             </Nav.Link>
             <NavDropdown
               eventkey={1}
@@ -78,12 +79,12 @@ const MedflowNavbar = () => {
             >
               <NavDropdown.Item href="myAccount">
                 <FontAwesomeIcon icon={faPortrait} className="icon" size="sm" />
-                My Profile
+                <span className="">My Profile</span>4
               </NavDropdown.Item>
 
               <NavDropdown.Item href="myAccount">
                 <FontAwesomeIcon icon={faCog} className="icon" size="sm" />
-                Settings
+                <span className="">Settings</span>
               </NavDropdown.Item>
 
               <NavDropdown.Item href="myAccount">
@@ -92,7 +93,7 @@ const MedflowNavbar = () => {
                   className="icon"
                   size="sm"
                 />
-                Logout
+                <span className="">Logout</span>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
