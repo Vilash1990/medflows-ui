@@ -45,9 +45,7 @@ $backgroundColor: #86dde0;
 }
 
 .activeLink {
-  background-color: $primaryColor;
-  opacity: 0.6 !important;
-  z-index: 1 !important;
+  background-color: $backgroundColor;
 }
 
 .dropdown-toggle.nav-link::after {

@@ -1,5 +1,7 @@
 import { Row, Col } from "react-bootstrap";
-const Insurance = ({ ...insuranceInfo }) => {
+import { usePatientInfo } from "../context/UserContext";
+const Insurance = () => {
+  const patientInfo = usePatientInfo();
   return (
     <div className="container-fluiprofile">
       <div className="card bg-light">
@@ -8,18 +10,24 @@ const Insurance = ({ ...insuranceInfo }) => {
             <Col>
               <p>
                 Policy Number :
-                <span className="data">{insuranceInfo.policyNumber}</span>
+                <span className="data">
+                  {patientInfo.insuranceInfo.policyNumber}
+                </span>
               </p>
               <p>
                 Group Id :
-                <span className="data">{insuranceInfo.groupId}</span>
+                <span className="data">
+                  {patientInfo.insuranceInfo.groupId}
+                </span>
               </p>
               <p>
                 MRN :
-                <span className="data">{insuranceInfo.mrnNumber}</span>
+                <span className="data">
+                  {patientInfo.insuranceInfo.mrnNumber}
+                </span>
               </p>
             </Col>
-            </Row>
+          </Row>
         </div>
       </div>
     </div>

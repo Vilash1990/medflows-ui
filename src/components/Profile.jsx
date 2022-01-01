@@ -3,7 +3,9 @@ import { Row, Col, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Insurance from "./Insurance";
-const Profile = ({ userInfo, insuranceInfo }) => {
+import { usePatientInfo } from "../context/UserContext";
+const Profile = () => {
+  const patientInfo = usePatientInfo();
   const [expandState, setExpandedState] = useState(false);
 
   const toggleState = () => {
@@ -24,16 +26,16 @@ const Profile = ({ userInfo, insuranceInfo }) => {
         onClick={() => toggleState()}
       >
         <Col xs={12} lg={4}>
-          <strong>Patient Name:</strong><span className="data">{userInfo.name}</span>
+          <strong>Patient Name:</strong><span className="data">{patientInfo.userInfo.name}</span>
         </Col>
         <Col xs={12} lg={2}>
-        <strong>Age :</strong><span className="data">{userInfo.age}</span>
+        <strong>Age :</strong><span className="data">{patientInfo.userInfo.age}</span>
         </Col>
         <Col xs={12} lg={2}>
-        <strong>DOB :</strong><span className="data">{userInfo.dateOfBirth}</span>
+        <strong>DOB :</strong><span className="data">{patientInfo.userInfo.dateOfBirth}</span>
         </Col>
         <Col xs={12} lg={3}>
-        <strong>Insurance :</strong><span className="data">{insuranceInfo.providerName}</span>
+        <strong>Insurance :</strong><span className="data">{patientInfo.insuranceInfo.providerName}</span>
         </Col>
         <Col xs={12} lg={1}>
           {expandState ? (
@@ -49,7 +51,7 @@ const Profile = ({ userInfo, insuranceInfo }) => {
             <div className="card bg-light my-1 borderRight">
               <div className="card-body text-sm-left text-lg-left">
                 <img
-                  src={userInfo.headshot}
+                  src={patientInfo.userInfo.headshot}
                   className="rounded-circle mb-1"
                   height={"100"}
                   alt=""
@@ -63,13 +65,13 @@ const Profile = ({ userInfo, insuranceInfo }) => {
                 <Row>
                   <Col>
                     <p>
-                      Gender :<span className="data">{userInfo.gender}</span>
+                      Gender :<span className="data">{patientInfo.userInfo.gender}</span>
                     </p>
                     <p>
-                      PHP :<span className="data">{userInfo.physician}</span>
+                      PHP :<span className="data">{patientInfo.userInfo.physician}</span>
                     </p>
                     <p>
-                      Cell :<span className="data">{userInfo.cellPhone}</span>
+                      Cell :<span className="data">{patientInfo.userInfo.cellPhone}</span>
                     </p>
                   </Col>
                 </Row>
@@ -78,7 +80,7 @@ const Profile = ({ userInfo, insuranceInfo }) => {
           </Col>
           <Col xs={12} lg={4}>
             <div >
-              <Insurance {...insuranceInfo} />
+              <Insurance />
             </div>
           </Col>
         </Row>

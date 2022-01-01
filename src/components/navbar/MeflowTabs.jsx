@@ -13,7 +13,7 @@ const MedflowTabs = () => {
       >
         <Tab eventKey="vitals" title="Vitals"></Tab>
         <Tab eventKey="allergies" title="Allergies"></Tab>
-        <Tab eventKey="progressNotes" title="Progress Notes"><ProgressNotes ></ProgressNotes></Tab>
+        <Tab eventKey="progressNotes" title="Progress Notes"></Tab>
         <Tab eventKey="differentials" title="Differentials"></Tab>
         <Tab eventKey="medications" title="Medications" disabled></Tab>
       </Tabs>

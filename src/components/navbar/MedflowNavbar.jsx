@@ -11,7 +11,11 @@ import {
   faSignOutAlt,
   faClinicMedical,
 } from "@fortawesome/free-solid-svg-icons";
-const MedflowNavbar = ({ headshot }) => {
+
+import { usePatientInfo } from "../../context/UserContext";
+
+const MedflowNavbar = () => {
+  const patientInfo = usePatientInfo();
   return (
     <Navbar bg="light" variant="light" sticky="top" expand="lg" className="shadow-sm rounded">
       <Container>
@@ -63,7 +67,7 @@ const MedflowNavbar = ({ headshot }) => {
               title={
                 <div className="pull-left">
                   <img
-                    src={headshot}
+                    src={patientInfo.userInfo.headshot}
                     className="rounded-circle"
                     height="25"
                     alt="Portrait of a Woman"
