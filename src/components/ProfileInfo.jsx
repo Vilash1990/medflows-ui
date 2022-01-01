@@ -2,9 +2,9 @@ import React ,{ useState } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import Insurance from "./Insurance";
+import InsuranceInfo from "./InsuranceInfo";
 import { usePatientInfo } from "../context/UserContext";
-const Profile = () => {
+const ProfileInfo = () => {
   const patientInfo = usePatientInfo();
   const [expandState, setExpandedState] = useState(false);
 
@@ -80,7 +80,7 @@ const Profile = () => {
           </Col>
           <Col xs={12} lg={4}>
             <div >
-              <Insurance />
+              <InsuranceInfo />
             </div>
           </Col>
         </Row>
@@ -89,4 +89,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ProfileInfo;

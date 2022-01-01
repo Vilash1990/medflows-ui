@@ -1,6 +1,6 @@
 import { Row, Col } from "react-bootstrap";
 import { usePatientInfo } from "../context/UserContext";
-const Insurance = () => {
+const InsuranceInfo = () => {
   const patientInfo = usePatientInfo();
   return (
     <div className="container-fluiprofile">
@@ -34,4 +34,4 @@ const Insurance = () => {
   );
 };
 
-export default Insurance;
+export default InsuranceInfo;

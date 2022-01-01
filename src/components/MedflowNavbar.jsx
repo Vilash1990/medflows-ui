@@ -12,7 +12,7 @@ import {
   faClinicMedical,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { usePatientInfo } from "../../context/UserContext";
+import { usePatientInfo } from "../context/UserContext";
 
 const MedflowNavbar = () => {
   const patientInfo = usePatientInfo();

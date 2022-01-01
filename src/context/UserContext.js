@@ -19,7 +19,7 @@ export function UserInfoProvider({ children }) {
       dateOfBirth: "08/07/1983",
       physician: "Dr.Kevin Castor",
       gender: "Female",
-      headshot: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(31).webp",
+      headshot: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(30).webp",
       cellPhone: "309-309-3094",
     },
     insuranceInfo: {
