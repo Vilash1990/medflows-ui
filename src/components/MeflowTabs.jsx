@@ -8,7 +8,7 @@ import {
   faMedkit,
   faPumpMedical,
 } from "@fortawesome/free-solid-svg-icons";
-import ProgressNotes from "./ProgressNotes";
+import ProgressNotes from "./ProgressNotes/ProgressNotes";
 const MedflowTabs = () => {
   const [key, setKey] = useState("progressNotes");
   return (

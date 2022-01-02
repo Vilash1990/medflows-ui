@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 
-import CardDescription from "./CardDescription";
+import CardDescription from "../shared/CardDescription";
 
 const HistoryIllness = ({
   illnessDescription,

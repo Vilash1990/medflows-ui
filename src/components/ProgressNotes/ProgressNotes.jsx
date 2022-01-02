@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Button } from "react-bootstrap";
-import CardListGroup from "./CardListGroup";
-import { usePatientInfo } from "../context/UserContext";
+import CardListGroup from "../shared/CardListGroup";
+import { usePatientInfo } from "../../context/UserContext";
 import HistoryIllness from "./HistoryIllness";
 const ProgressNotes = () => {
   const patientInfo = usePatientInfo();
