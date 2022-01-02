@@ -78,7 +78,7 @@ const MedflowNavbar = () => {
             >
               <NavDropdown.Item href="myAccount">
                 <FontAwesomeIcon icon={faPortrait} className="icon" size="sm" />
-                <span className="">My Profile</span>4
+                <span className="">My Profile</span>
               </NavDropdown.Item>
 
               <NavDropdown.Item href="myAccount">

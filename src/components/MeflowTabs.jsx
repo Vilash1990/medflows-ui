@@ -12,12 +12,11 @@ import ProgressNotes from "./ProgressNotes";
 const MedflowTabs = () => {
   const [key, setKey] = useState("progressNotes");
   return (
-    <div className="mt-3">
+    <div className="mt-2">
       <Tabs
         id="controlled-tab-example "
         activeKey={key}
         onSelect={(k) => setKey(k)}
-        className="mb-3"
       >
         <Tab
           eventKey="vitals"

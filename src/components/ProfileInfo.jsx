@@ -6,7 +6,7 @@ import InsuranceInfo from "./InsuranceInfo";
 import { usePatientInfo } from "../context/UserContext";
 const ProfileInfo = () => {
   const patientInfo = usePatientInfo();
-  const [expandState, setExpandedState] = useState(true);
+  const [expandState, setExpandedState] = useState(false);
 
   const toggleState = () => {
     setExpandedState(!expandState);

@@ -1,5 +1,6 @@
-$primaryColor: #18868a;
-$backgroundColor: #86dde0;
+$primaryColor: #217c9d;
+$backgroundColor: #17a2b8 !important;
+$navLinksGap: 1em;
 
 .App {
   position: relative;
@@ -19,6 +20,7 @@ $backgroundColor: #86dde0;
 
 .navLink {
   position: relative;
+  margin-left: $navLinksGap;
 }
 
 .navLink::before {
@@ -73,10 +75,6 @@ div.card.bg-light.col-md-4.borderRight {
   border-radius: unset;
 }
 
-.logo h3 {
-  margin-left: 5px;
-}
-
 .data {
   font-weight: 450;
   margin-left: 5px;
@@ -100,9 +98,10 @@ div.card.bg-light.col-md-4.borderRight {
 button.nav-link {
   color: $primaryColor;
   font-weight: 500;
+  margin-left: $navLinksGap;
 }
 
-button.nav-link:hover{
+button.nav-link:hover {
   color: #495057;
   font-weight: 600;
 }
@@ -113,13 +112,62 @@ button.nav-link:hover{
   font-weight: 600;
 }
 
-.medflowFooter{
+.medflowFooter {
   bottom: 0;
   position: absolute;
 }
 
-.strong{
+.strong {
   color: black;
   font-weight: 400;
 }
 
+button.customButton {
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+  font-weight: 600;
+  float: right;
+  color: white;
+}
+
+button.customButton:hover {
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+  font-weight: 600;
+  float: right;
+  color: white;
+  cursor: pointer;
+}
+
+button.customButtonSave {
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+  font-weight: 600;
+  float: left;
+}
+
+button.customButtonSave:hover {
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+  font-weight: 600;
+  float: left;
+  cursor: pointer;
+}
+
+.list-group-item {
+  padding: 0.2 rem 1 rem;
+  font-size: smaller;
+}
+
+.form-control:active {
+  border-style: none;
+}
+
+.progressNotesCard {
+  margin: 30px auto;
+}
+.scrollable {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  max-height: 200px;
+}
