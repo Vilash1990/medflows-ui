@@ -17,7 +17,7 @@ import { usePatientInfo } from "../context/UserContext";
 const MedflowNavbar = () => {
   const patientInfo = usePatientInfo();
   return (
-    <Navbar bg="light" variant="light" sticky="top" expand="lg" className="shadow-sm rounded navBar">
+    <Navbar bg="light" variant="light" sticky="top" expand="lg" className="shadow rounded navBar">
       <Container>
         <Navbar.Brand href="#home">
           <div className="logo">
@@ -35,14 +35,14 @@ const MedflowNavbar = () => {
               <span className="strong">Chart</span>
             </Nav.Link>
             <Nav.Link href="#features" className="navLink">
-              <FontAwesomeIcon icon={faCalculator} className="icon" size="sm" />
+              <FontAwesomeIcon icon={faCalculator} className="icon" size="md" />
               <span className="strong">Encounter</span>
             </Nav.Link>
             <Nav.Link href="#cart" className="navLink">
               <FontAwesomeIcon
                 icon={faShoppingCart}
                 className="icon"
-                size="sm"
+                size="md"
               />
               <span className="strong">In Basket</span>
             </Nav.Link>
@@ -50,16 +50,16 @@ const MedflowNavbar = () => {
               <FontAwesomeIcon
                 icon={faNotesMedical}
                 className="icon"
-                size="sm"
+                size="md"
               />
               <span className="strong">Medflows</span>
             </Nav.Link>
             <Nav.Link href="#differentials" className="navLink">
-              <FontAwesomeIcon icon={faMinus} size="sm" className="icon" />
+              <FontAwesomeIcon icon={faMinus} size="md" className="icon" />
               <span className="strong">Differentials</span>
             </Nav.Link>
             <Nav.Link href="#calculators" className="navLink">
-              <FontAwesomeIcon icon={faCalculator} size="sm" className="icon" />
+              <FontAwesomeIcon icon={faCalculator} size="md" className="icon" />
               <span className="strong">Calculators</span>
             </Nav.Link>
             <NavDropdown

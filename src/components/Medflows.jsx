@@ -6,7 +6,7 @@ const Medflows = () => {
     return (
         <div>
             <Row>
-            <div className="d-md-flex shadow-sm rounded bg-light py-0 mx-0 mt-1 infoSection">
+            <div className="d-md-flex shadow rounded bg-light py-0 mx-0 mt-1 infoSection">
               <ProfileInfo />
             </div>
           </Row>

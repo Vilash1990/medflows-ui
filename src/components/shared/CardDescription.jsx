@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Card } from "react-bootstrap";
-const CardDescription = ({ itemsHeader, description }) => {
+const CardDescription = ({ itemsHeader, iconToDisplay, description }) => {
   const listItemsEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -13,9 +13,9 @@ const CardDescription = ({ itemsHeader, description }) => {
 
   return (
     <div>
-      <Card className="progressNotesCard">
+      <Card className="shadow rounded progressNotesCard zoom">
         <Card.Header className="progressNotesCardHeader">
-          <strong>{itemsHeader}:</strong>
+          {iconToDisplay}<strong>{itemsHeader}</strong>
         </Card.Header>
         <Card.Body className="cardDescriptionBody scrollable">
           <Card.Text className="cardDescriptionText"><small>{description}</small></Card.Text>

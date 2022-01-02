@@ -25,7 +25,7 @@ const MedflowTabs = () => {
               <FontAwesomeIcon
                 icon={faPumpMedical}
                 className="icon"
-                size="sm"
+                size="md"
               />
               Vitals
             </div>
@@ -37,7 +37,7 @@ const MedflowTabs = () => {
           eventKey="allergies"
           title={
             <div>
-              <FontAwesomeIcon icon={faAllergies} className="icon" size="sm" />
+              <FontAwesomeIcon icon={faAllergies} className="icon" size="md" />
               Allergies
             </div>
           }
@@ -51,7 +51,7 @@ const MedflowTabs = () => {
               <FontAwesomeIcon
                 icon={faNotesMedical}
                 className="icon"
-                size="sm"
+                size="md"
               />
               Progress Notes
             </div>
@@ -63,7 +63,7 @@ const MedflowTabs = () => {
           eventKey="differentials"
           title={
             <div>
-              <FontAwesomeIcon icon={faMinus} className="icon" size="sm" />
+              <FontAwesomeIcon icon={faMinus} className="icon" size="md" />
               Differentials
             </div>
           }
@@ -74,7 +74,7 @@ const MedflowTabs = () => {
           eventKey="medications"
           title={
             <div>
-              <FontAwesomeIcon icon={faMedkit} className="icon" size="sm" />
+              <FontAwesomeIcon icon={faMedkit} className="icon" size="md" />
               Medications
             </div>
           }

@@ -125,10 +125,7 @@ button.nav-link:hover {
   font-family: $fontFamily;
 }
 
-.medflowFooter {
-  bottom: 0;
-  position: absolute;
-}
+
 
 .strong {
   color: black;
@@ -196,8 +193,8 @@ button.customButtonSave:hover {
 }
 
 div.progressNotesRow.row {
-  margin-top: -1rem;
-  margin-bottom: -1rem;
+  margin-top: -1.2rem;
+  margin-bottom: -3rem;
 }
 
 .descriptionLink {
@@ -209,12 +206,21 @@ div.progressNotesRow.row {
 
 div.cardDescriptionBody.card-body {
   font-family: $fontFamily;
-  padding: 0.7rem 0.7rem;
+  padding: 0.3rem 0.3rem;
 }
 
 .illnessDescriptionContent {
   font-family: $fontFamily;
   font-weight: $textFontWeight;
   margin-bottom: 0.8rem;
+}
+
+.zoom:hover {
+  transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.medflowFooter {
+  bottom: 0;
+  position: relative;
 }
 

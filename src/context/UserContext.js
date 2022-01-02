@@ -30,7 +30,7 @@ export function UserInfoProvider({ children }) {
     },
     complaints: ["Fatigue", "Weight Gain", "High Cholesterol"],
     pastHealthIssues: ["Headache", "Thorat Pain", "Nasal Congestion"],
-    medications: ["Vitamin D", "Medicine A", "Tylenol 50mg"],
+    medication: ["Vitamin D", "Medicine A", "Tylenol 50mg"],
     physicalExams: ["TSH", "D Vitamin", "Viral", "Hemoglobin"],
     pastPhysicalTestsOrdered: [
       "TSH",

@@ -7,6 +7,10 @@ import {
   Button,
   Form,
 } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPlus
+} from "@fortawesome/free-solid-svg-icons";
 import { usePatientInfo, usePatientInfoUpdate } from "../../context/UserContext";
 const CardListGroup = ({
   itemsHeader,
@@ -14,6 +18,7 @@ const CardListGroup = ({
   itemsToUpdate,
   placeHolderText,
   isEditable,
+  iconToDisplay
 }) => {
   const patientInfo = usePatientInfo();
   const patientInfoUpdate = usePatientInfoUpdate();
@@ -42,9 +47,9 @@ const CardListGroup = ({
 
   return (
     <div>
-      <Card className="progressNotesCard">
+      <Card className="shadow rounded progressNotesCard zoom">
         <Card.Header className="progressNotesCardHeader">
-          <strong>{itemsHeader}:</strong>
+          {iconToDisplay}<strong>{itemsHeader}</strong>
         </Card.Header>
         <div className="scrollable" id="scrollableCard">
           <ListGroup variant="flush" as="ol" numbered>
@@ -73,7 +78,7 @@ const CardListGroup = ({
                 disabled={!inputItem}
                 type="submit"
               >
-                Add
+                <FontAwesomeIcon icon={faPlus} className="" size="md" />
               </Button>
             </InputGroup>
           </Form>
