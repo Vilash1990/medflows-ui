@@ -18,7 +18,6 @@ const CardListGroup = ({
   const patientInfoUpdate = usePatientInfoUpdate();
   const [inputItem, setInputItem] = useState("");
   const [listItems, setListItems] = useState(itemList);
-  const [newListItems, setNewListItems] = useState(itemList);
 
   const listItemsEndRef = useRef(null);
 
@@ -27,32 +26,28 @@ const CardListGroup = ({
   };
 
   useEffect(() => {
-    setNewListItems(listItems);
     scrollToBottom();
+    setInputItem("");
   }, [listItems]);
 
   const updateListItems = (e) => {
     e.preventDefault();
-    let updatedListItems = [...listItems, inputItem];
+    setListItems((listItems) => [...listItems, inputItem]);
     if (itemsToUpdate === "complaints") {
-      patientInfo.complaints = updatedListItems;
+      patientInfo.complaints = listItems;
     }
     patientInfoUpdate(patientInfo);
-    refreshListItems(updatedListItems);
   };
 
-  const refreshListItems = (updatedListItems) => {
-    setListItems(updatedListItems);
-  };
   return (
     <div>
       <Card className="progressNotesCard">
-        <Card.Header>
+        <Card.Header className="progressNotesCardHeader">
           <strong>{itemsHeader}:</strong>
         </Card.Header>
         <div className="scrollable" id="scrollableCard">
           <ListGroup variant="flush" as="ol" numbered>
-            {newListItems.map((item) => (
+            {listItems.map((item) => (
               <ListGroup.Item key={item} as="li">
                 {item}
               </ListGroup.Item>
@@ -60,7 +55,7 @@ const CardListGroup = ({
             <div ref={listItemsEndRef} />
           </ListGroup>
         </div>
-        
+
         <Form onSubmit={(e) => updateListItems(e)}>
           <InputGroup className="mb-1" size="sm">
             <FormControl
