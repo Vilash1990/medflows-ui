@@ -20,11 +20,11 @@ const ProgressNotes = () => {
       </Row>
       <Row>
         <Col xs={12}>
-          <Button className="my-3 mx-3  customButtonSave" size="md">
+          <Button className="customButtonSave" size="sm">
             Save Updates
           </Button>
 
-          <Button className="my-3 customButton" size="md">
+          <Button className=" customButton" size="sm">
             Run Differentials
           </Button>
         </Col>
