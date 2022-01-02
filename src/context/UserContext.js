@@ -32,7 +32,17 @@ export function UserInfoProvider({ children }) {
     pastHealthIssues: ["Headache", "Thorat Pain", "Nasal Congestion"],
     medications: ["Vitamin D", "Medicine A", "Tylenol 50mg"],
     physicalExams: ["TSH", "D Vitamin", "Viral", "Hemoglobin"],
-    historicalReports: [
+    pastPhysicalTestsOrdered: [
+      "TSH",
+      "D Vitamin",
+      "Viral",
+      "HGB",
+      "WBC",
+      "MCV",
+    ],
+    illnessDescription:
+      "Kim Rieger is a 38 years old female presenting with c/o fatigue, back pain & weight gain for last 6 months. He is very active and eats healthy. Denies any fever, cough, abdominal pain, snoring or any new medications. He called me 1 month ago with his complaints. I ordered TSH, CBC, CMP, B12, Folic Acid and Vitamins D levels. All test came back normal except:",
+      abnormalPhysicalTests: [
       {
         component: "HGB",
         referenceRangeStart: "12.3",
@@ -56,7 +66,7 @@ export function UserInfoProvider({ children }) {
         referenceRangeStart: "0.30",
         referenceRangeEnd: "5.3",
         actualValue: "0.2",
-      }
+      },
     ],
     assessmentPlan: [],
   });

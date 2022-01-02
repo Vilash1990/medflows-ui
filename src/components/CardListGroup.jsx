@@ -13,6 +13,7 @@ const CardListGroup = ({
   itemList,
   itemsToUpdate,
   placeHolderText,
+  isEditable,
 }) => {
   const patientInfo = usePatientInfo();
   const patientInfoUpdate = usePatientInfoUpdate();
@@ -48,7 +49,7 @@ const CardListGroup = ({
         <div className="scrollable" id="scrollableCard">
           <ListGroup variant="flush" as="ol" numbered>
             {listItems.map((item) => (
-              <ListGroup.Item key={item} as="li">
+              <ListGroup.Item key={item} className="data" as="li">
                 {item}
               </ListGroup.Item>
             ))}
@@ -56,25 +57,27 @@ const CardListGroup = ({
           </ListGroup>
         </div>
 
-        <Form onSubmit={(e) => updateListItems(e)}>
-          <InputGroup className="mb-1" size="sm">
-            <FormControl
-              placeholder={placeHolderText}
-              aria-label={placeHolderText}
-              aria-describedby="basic-addon2"
-              value={inputItem}
-              onChange={(e) => setInputItem(e.target.value)}
-            />
-            <Button
-              variant="btn customButton"
-              id="button-addon2"
-              disabled={!inputItem}
-              type="submit"
-            >
-              Add
-            </Button>
-          </InputGroup>
-        </Form>
+        {isEditable && (
+          <Form onSubmit={(e) => updateListItems(e)}>
+            <InputGroup className="inputFormGroup">
+              <FormControl
+                placeholder={placeHolderText}
+                aria-label={placeHolderText}
+                aria-describedby="basic-addon2"
+                value={inputItem}
+                onChange={(e) => setInputItem(e.target.value)}
+              />
+              <Button
+                variant="btn customButton"
+                id="button-addon2"
+                disabled={!inputItem}
+                type="submit"
+              >
+                Add
+              </Button>
+            </InputGroup>
+          </Form>
+        )}
       </Card>
     </div>
   );
