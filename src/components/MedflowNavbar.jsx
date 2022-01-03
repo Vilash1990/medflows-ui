@@ -31,18 +31,17 @@ const MedflowNavbar = () => {
         <Navbar.Collapse>
           <Nav className="ms-auto" >
             <Nav.Link href="#chart" className="navLink">
-              <FontAwesomeIcon icon={faChartBar} className="icon" size="sm" />
+              <FontAwesomeIcon icon={faChartBar} className="icon"/>
               <span className="strong">Chart</span>
             </Nav.Link>
             <Nav.Link href="#features" className="navLink">
-              <FontAwesomeIcon icon={faCalculator} className="icon" size="md" />
+              <FontAwesomeIcon icon={faCalculator} className="icon"/>
               <span className="strong">Encounter</span>
             </Nav.Link>
             <Nav.Link href="#cart" className="navLink">
               <FontAwesomeIcon
                 icon={faShoppingCart}
                 className="icon"
-                size="md"
               />
               <span className="strong">In Basket</span>
             </Nav.Link>
@@ -50,16 +49,15 @@ const MedflowNavbar = () => {
               <FontAwesomeIcon
                 icon={faNotesMedical}
                 className="icon"
-                size="md"
               />
               <span className="strong">Medflows</span>
             </Nav.Link>
             <Nav.Link href="#differentials" className="navLink">
-              <FontAwesomeIcon icon={faMinus} size="md" className="icon" />
+              <FontAwesomeIcon icon={faMinus}className="icon" />
               <span className="strong">Differentials</span>
             </Nav.Link>
             <Nav.Link href="#calculators" className="navLink">
-              <FontAwesomeIcon icon={faCalculator} size="md" className="icon" />
+              <FontAwesomeIcon icon={faCalculator}className="icon" />
               <span className="strong">Calculators</span>
             </Nav.Link>
             <NavDropdown

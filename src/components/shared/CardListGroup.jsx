@@ -46,7 +46,7 @@ const CardListGroup = ({
   };
 
   return (
-    <div>
+    <>
       <Card className="shadow rounded progressNotesCard zoom">
         <Card.Header className="progressNotesCardHeader">
           {iconToDisplay}<strong>{itemsHeader}</strong>
@@ -78,13 +78,13 @@ const CardListGroup = ({
                 disabled={!inputItem}
                 type="submit"
               >
-                <FontAwesomeIcon icon={faPlus} className="" size="md" />
+                <FontAwesomeIcon icon={faPlus} />
               </Button>
             </InputGroup>
           </Form>
         )}
       </Card>
-    </div>
+    </>
   );
 };
 

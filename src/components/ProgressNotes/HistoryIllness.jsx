@@ -5,19 +5,23 @@ const HistoryIllness = ({
   illnessDescription,
   abnormalPhysicalTests,
   gender,
-  iconToDisplay
+  iconToDisplay,
 }) => {
   return (
     <div className="illnessDescriptionContainer">
       <CardDescription
         itemsHeader="Illness Description History"
-        iconToDisplay ={iconToDisplay}
+        iconToDisplay={iconToDisplay}
         description={
-          <div>
+          <>
             <p className="illnessDescriptionContent">{illnessDescription}</p>
             <p className="illnessDescriptionContent data">
               {abnormalPhysicalTests.map((abnormalPhysicalTest) => (
-                <a href="link" className="descriptionLink zoom">
+                <a
+                  href="link"
+                  key={abnormalPhysicalTest.component}
+                  className="descriptionLink zoom"
+                >
                   {abnormalPhysicalTest.component} of{" "}
                   {abnormalPhysicalTest.actualValue}
                 </a>
@@ -28,7 +32,7 @@ const HistoryIllness = ({
                 gender === "male" ? `He` : `She`
               } is here to discuss his complaints and lab results`}
             </p>
-          </div>
+          </>
         }
       />
     </div>

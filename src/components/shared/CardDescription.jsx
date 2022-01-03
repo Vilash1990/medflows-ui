@@ -12,16 +12,19 @@ const CardDescription = ({ itemsHeader, iconToDisplay, description }) => {
   }, [description]);
 
   return (
-    <div>
+    <>
       <Card className="shadow rounded progressNotesCard zoom">
         <Card.Header className="progressNotesCardHeader">
-          {iconToDisplay}<strong>{itemsHeader}</strong>
+          {iconToDisplay}
+          <strong>{itemsHeader}</strong>
         </Card.Header>
         <Card.Body className="cardDescriptionBody scrollable">
-          <Card.Text className="cardDescriptionText"><small>{description}</small></Card.Text>
+          <small>
+            {description}
+          </small>
         </Card.Body>
       </Card>
-    </div>
+    </>
   );
 };
 

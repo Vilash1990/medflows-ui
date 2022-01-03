@@ -5,8 +5,8 @@ import {
   faNotesMedical,
   faMinus,
   faAllergies,
-  faMedkit,
   faPumpMedical,
+  faPills,
 } from "@fortawesome/free-solid-svg-icons";
 import ProgressNotes from "./ProgressNotes/ProgressNotes";
 const MedflowTabs = () => {
@@ -22,11 +22,7 @@ const MedflowTabs = () => {
           eventKey="vitals"
           title={
             <div>
-              <FontAwesomeIcon
-                icon={faPumpMedical}
-                className="icon"
-                size="md"
-              />
+              <FontAwesomeIcon icon={faPumpMedical} className="icon" />
               Vitals
             </div>
           }
@@ -37,7 +33,7 @@ const MedflowTabs = () => {
           eventKey="allergies"
           title={
             <div>
-              <FontAwesomeIcon icon={faAllergies} className="icon" size="md" />
+              <FontAwesomeIcon icon={faAllergies} className="icon" />
               Allergies
             </div>
           }
@@ -48,11 +44,7 @@ const MedflowTabs = () => {
           eventKey="progressNotes"
           title={
             <div>
-              <FontAwesomeIcon
-                icon={faNotesMedical}
-                className="icon"
-                size="md"
-              />
+              <FontAwesomeIcon icon={faNotesMedical} className="icon" />
               Progress Notes
             </div>
           }
@@ -63,7 +55,7 @@ const MedflowTabs = () => {
           eventKey="differentials"
           title={
             <div>
-              <FontAwesomeIcon icon={faMinus} className="icon" size="md" />
+              <FontAwesomeIcon icon={faMinus} className="icon" />
               Differentials
             </div>
           }
@@ -74,7 +66,7 @@ const MedflowTabs = () => {
           eventKey="medications"
           title={
             <div>
-              <FontAwesomeIcon icon={faMedkit} className="icon" size="md" />
+              <FontAwesomeIcon icon={faPills} className="icon" />
               Medications
             </div>
           }
