@@ -1,7 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Card, Form, Button, InputGroup } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { Card, Form} from "react-bootstrap";
 import {
   usePatientInfo,
   usePatientInfoUpdate,
