@@ -103,7 +103,7 @@ div.card.bg-light.col-md-4.borderRight {
   margin-right: 3px;
 }
 
-.headerIcon{
+.headerIcon {
   margin-right: 5px;
   transition: all 0.6s;
 }
@@ -131,8 +131,6 @@ button.nav-link:hover {
   font-weight: $activeLinkFontWeight;
   font-family: $fontFamily;
 }
-
-
 
 .strong {
   color: black;
@@ -170,7 +168,7 @@ button.customButtonSave {
 button.customButtonSave:hover {
   background-color: $primaryColor;
   border-color: $primaryColor;
-  font-family: "Roboto", sans-serif;
+  font-family: $fontFamily;
   font-weight: $buttonFontWeight;
   float: left;
   cursor: pointer;
@@ -223,7 +221,9 @@ div.cardDescriptionBody.card-body {
 }
 
 .zoom:hover {
-  transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(
+    1.02
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .medflowFooter {
@@ -231,18 +231,17 @@ div.cardDescriptionBody.card-body {
   position: relative;
 }
 
-.inputTextArea{
+.inputTextArea {
   resize: none;
 }
 
 textarea.inputTextArea.form-control {
   font-size: $textFontWeight;
-  font-size:smaller;
+  font-size: smaller;
   font-family: $fontFamily;
 }
 
-.progressNotesCardHeader{
+.progressNotesCardHeader {
   background-color: $primaryColor !important;
   color: white;
 }
-
